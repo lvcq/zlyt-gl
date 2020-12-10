@@ -1,0 +1,23 @@
+{
+    "files": [
+        "src/**/*.ts"
+    ],
+    "include": [
+        "src/**/*.d.ts"
+    ],
+    "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "./out-dir",
+        "target": "ES2015",
+        "module": "commonjs",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "paths": {
+            "gulp-typescript": ["node_modules/gulp-typescript/release/main"] 
+        }
+    },
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "Recommended"
+}
