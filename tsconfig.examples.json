@@ -1,16 +1,19 @@
 {
     "files": [
+        "examples/*.ts",
+        "examples/**/*.ts",
         "src/*.ts",
         "src/**/*.ts"
     ],
     "include": [
+        "examples/**/*.d.ts",
         "src/**/*.d.ts"
     ],
     "compilerOptions": {
         "baseUrl": "./",
         "outDir": "./out-dir",
-        "target": "ES2015",
-        "module": "ES2020",
+        "target": "ES5",
+        "module": "AMD",
         "strict": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
