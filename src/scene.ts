@@ -47,21 +47,20 @@ export class Scene {
         this.canvas = canvasElement;
     }
 
+    /**
+     * @description 计算canvas尺寸，clientSize - paddingSize
+     */
     private calcCanvasSize() {
         if (this.container) {
-            const offsetHeight = this.container.offsetHeight;
-            const offsetWidth = this.container.offsetWidth;
-            const borderTop = this.cssPixelToNum(getComputedStyle(this.container).borderTopWidth);
-            const borderRight = this.cssPixelToNum(getComputedStyle(this.container).borderRightWidth);
-            const borderBottom = this.cssPixelToNum(getComputedStyle(this.container).borderBottomWidth);
-            const borderLeft = this.cssPixelToNum(getComputedStyle(this.container).borderLeftWidth);
+            const clientHeight = this.container.clientHeight;
+            const clientWidth = this.container.clientWidth;
             const paddingTop = this.cssPixelToNum(getComputedStyle(this.container).paddingTop);
             const paddingRight = this.cssPixelToNum(getComputedStyle(this.container).paddingRight);
             const paddingBottom = this.cssPixelToNum(getComputedStyle(this.container).paddingBottom);
             const paddingLeft = this.cssPixelToNum(getComputedStyle(this.container).paddingLeft);
             this.screenSize = {
-                width: offsetWidth - borderLeft - borderRight - paddingLeft - paddingRight,
-                height: offsetHeight - borderTop - borderBottom - paddingTop - paddingBottom
+                width: clientWidth - paddingLeft - paddingRight,
+                height: clientHeight - paddingTop - paddingBottom
             }
         }
     }
