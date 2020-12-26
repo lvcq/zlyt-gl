@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.zlyt",
+  "files": ["test.ts"],
+  "compilerOptions": {
+    "typeRoots": ["./node_modules/@types", "./typings"],
+    "target": "ES5"
+  },
+  "include": ["./**/*.spec.ts", "./**/*.d.ts"]
+}

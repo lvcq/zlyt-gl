@@ -3,3 +3,8 @@ yarn.lock
 dist
 
 package-lock.json
+yarn-error.log
+debug.log
+
+tests/**/*.html
+coverage
